@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GLSL Development</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000;
+        color: #fff;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .control-container-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .control-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+      }
+      .stats-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <canvas id="canvas"></canvas>
+      <div class="stats-container">
+        <div id="fps"></div>
+        <div id="time"></div>
+      </div>
+      <div class="control-container-wrapper">
+        <button id="screenshotButton">Screenshot</button>
+        <div class="control-container">
+          Width:
+          <input id="widthNumber" type="number" min="100" max="1920" value="580">
+          <input id="widthRange" type="range" min="100" max="1920" value="580">
+        </div>
+        
+        <div class="control-container">
+          Height:
+          <input id="heightNumber" type="number" min="100" max="1080" value="580">
+          <input id="heightRange" type="range" min="100" max="1080" value="580">
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
